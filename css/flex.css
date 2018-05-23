@@ -1,0 +1,102 @@
+body {
+    font-family: Courier New, Courier, monospace;
+}
+
+div.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+}
+
+header, footer {
+    height: 60px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 
+header > div (filha imediata)
+header div (até netos e assim segue)
+*/
+
+header > div {
+    display: flex;
+    width: 250px;
+    /* margin: 10px; ou: */
+    height: 40px;
+}
+
+header > div > img {
+    /* margin: 10px; ou: */
+    margin: 0 10px;
+}
+
+header > div:last-child > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+div.conteudo {
+    display: flex;
+}
+
+div.conteudo > * {
+    padding:  10px;
+}
+
+h2 {
+    font-size:  1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+section.noticias > article {
+    margin:  10px 0;
+}
+
+section.noticias > article > div {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    background-color: grey;
+    display:  flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+aside > * {
+    margin-bottom: 20px;
+}
+
+section.noticias > article > img {
+    float: right;
+}
+
+footer > div {
+    width: 360;
+    font-size: 0.8;
+}
+
+footer > div.right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+header > div > img, footer > div > img {
+    margin: 0 10px;
+}
+
